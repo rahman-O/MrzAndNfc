@@ -1,0 +1,21 @@
+
+c
+3app/src/main/java/com/gsi/mrzandnfc/MainActivity.kt,7\d\7dceb8349bc65091fd10c55aa99fb7e26434f284
+D
+app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+C
+settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
+@
+build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+I
+gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
+`
+0app/src/main/java/com/gsi/mrzandnfc/ImageUtil.kt,d\7\d75f1bd09d042034b3d5a4c0a7c0a7a649aad93d
+e
+5app/src/main/java/com/gsi/mrzandnfc/ResultActivity.kt,1\2\12bda90a3b07867981a125b3ded3a55def9a06bf
+k
+;app/src/main/java/com/gsi/mrzandnfc/smartscanner/Scanner.kt,b\f\bfb632cb94cb0f5e8a910d843df9fffe6c9cc4f5
+q
+Aapp/src/main/java/com/gsi/mrzandnfc/smartscanner/ScannerScreen.kt,b\e\bef3082b1f4003b79f19beec356cb90b28d961f2

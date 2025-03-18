@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MrzAndNfc</string>
+
+
+    <string name="input_passport_number">رقم جواز السفر</string>
+    <string name="input_expiration_date">تاريخ الانتهاء</string>
+    <string name="input_date_of_birth">تاريخ الميلاد</string>
+
+    <string name="info_loading">جاري القراءة…</string>
+    <string name="info_scan_passport">يرجى ملء التفاصيل أدناه ووضع هاتفك فوق جواز السفر.\n\nالمعلومات التالية مطلوبة لفك تشفير بيانات جواز السفر محليًا. نحن لا نقوم بتخزين أو رفع أو مشاركة أي من بياناتك. التطبيق مفتوح المصدر بالكامل ومتاح للمراجعة.</string>
+    <string name="error_input">يرجى إدخال التفاصيل لقراءة جواز السفر</string>
+    <string name="error_read">فشل في قراءة جواز السفر</string>
+
+    <string name="result_first_name">الاسم الأول</string>
+    <string name="result_last_name">الاسم الأخير</string>
+    <string name="result_gender">الجنس</string>
+    <string name="result_state">الدولة</string>
+    <string name="result_nationality">الجنسية</string>
+    <string name="result_passive_auth">المصادقة السلبية</string>
+    <string name="result_chip_auth">مصادقة الشريحة</string>
+
+    <string name="pass">نجح</string>
+    <string name="failed">فشل</string>
+
+
+</resources>
