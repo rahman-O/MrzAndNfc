@@ -19,3 +19,15 @@ k
 ;app/src/main/java/com/gsi/mrzandnfc/smartscanner/Scanner.kt,b\f\bfb632cb94cb0f5e8a910d843df9fffe6c9cc4f5
 q
 Aapp/src/main/java/com/gsi/mrzandnfc/smartscanner/ScannerScreen.kt,b\e\bef3082b1f4003b79f19beec356cb90b28d961f2
+d
+4app/src/main/java/com/gsi/mrzandnfc/faceDetection.kt,5\9\59fe5c9bfc847658b2557f9acded8123a3192417
+d
+4app/src/main/java/com/gsi/mrzandnfc/FaceDetection.kt,3\c\3c20cca2bd2898cad18ebd1a718849b5ef133a10
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+Å
+Q.idea/sonarlint/securityhotspotstore/5/9/59fe5c9bfc847658b2557f9acded8123a3192417,8\6\86476cb0515a53bc60ed5f42b21feb3d6d97375c
+Å
+Q.idea/sonarlint/securityhotspotstore/3/c/3c20cca2bd2898cad18ebd1a718849b5ef133a10,3\0\30e979e95cc0831eb83ac97ea1cb05de3205b074
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e

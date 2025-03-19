@@ -87,6 +87,7 @@ dependencies {
     implementation ("androidx.profileinstaller:profileinstaller:1.3.0")
     implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
     implementation ("com.google.mlkit:text-recognition:16.0.1")
+    implementation ("com.google.mlkit:face-detection:16.1.7")
 
     /*
     implementation ("com.google.mlkit:language-id:17.0.4")

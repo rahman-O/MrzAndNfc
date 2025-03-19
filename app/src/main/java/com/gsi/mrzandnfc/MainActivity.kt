@@ -38,6 +38,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -46,11 +47,14 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.face.FaceDetection
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.gsi.mrzandnfc.ImageUtil.decodeImage
 import com.gsi.mrzandnfc.smartscanner.ScannerScreen
 import com.gsi.mrzandnfc.ui.theme.MrzAndNfcTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import net.sf.scuba.data.Gender
 import net.sf.scuba.smartcards.CardService
 import org.apache.commons.io.IOUtils
@@ -125,7 +129,8 @@ class MainActivity : ComponentActivity() {
         val textE = remember { mutableStateOf("") }
         var fileNfcImage by remember { mutableStateOf<Bitmap?>(null) }
         var fileNfcImage2 by remember { mutableStateOf<Bitmap?>(null) }
-
+        var faceDetection by remember { mutableStateOf<Bitmap?>(null) }
+        val coroutineScope = rememberCoroutineScope { Dispatchers.IO }
 
 
         Column(
@@ -138,6 +143,16 @@ class MainActivity : ComponentActivity() {
             if (isLoading.value) {
                 Text("جاري قراءة البيانات")
             }else{
+
+                faceDetection?.let {
+                    Image(
+                        modifier = Modifier.size(150.dp),
+                        bitmap = it.asImageBitmap(),
+                        contentDescription = "Face Detection"
+                    )
+                }
+
+
                 fileNfcImage?.let {
                     Image(
                         modifier = Modifier.size(150.dp),
@@ -173,9 +188,22 @@ class MainActivity : ComponentActivity() {
                 context = context,
                 startScan = startScanner,
                 onResult = { bitmap, imageUri ->
+                    fileNfcImage = bitmap
+                    coroutineScope.launch {
+                        try {
+                            faceDetection = FaceDetectionHelper().detectFace(bitmap, context)
+                            if (faceDetection == null) {
+                                textE.value = "الصورة لا تحتوي على وجه"
+                            }
 
+                        }catch (e: Exception){
+                            e.printStackTrace()
+                            Log.e("FaceDetection", "Error in face detection: ${e.message}")
+                        }
+
+                    }
                     // إذا لم يتم التقاط صورة بعد
-                    if (fileNfcImage == null) {
+                    /*if (fileNfcImage == null) {
                         fileNfcImage = bitmap
                         recognizeTextAndDetectLanguage(fileNfcImage!!) { recognizedText ->
 
@@ -187,7 +215,9 @@ class MainActivity : ComponentActivity() {
                             }else{
                                 textE.value=""
                             }
+
                         }
+
                         // التعرف على النص للصورة الأولى
 
 
@@ -218,7 +248,7 @@ class MainActivity : ComponentActivity() {
 
                     } else {
                         Toast.makeText(context, "تم التقاط صورتين بالفعل", Toast.LENGTH_SHORT).show()
-                    }
+                    }*/
 
                     startScanner = false
                 },

@@ -1,0 +1,5 @@
+
+ukotlin:S11721"0Remove this unused function parameter "context".(¸²œø8³–¾óÚ2J$cbe1da16-ca8d-4357-a421-f612ed666fd7
+akotlin:S6310*"Avoid hardcoded dispatchers.(Í¡·Ş8·–¾óÚ2J$09d777b4-a4fe-4076-94dd-2ed69caf8345
+wkotlin:S1144h"2Remove this unused private "enhanceBitmap" method.(´ãĞ8²šÀóÚ2J$e36920b9-0843-4d0d-99cb-d984168b5e6a
+vkotlin:S6518@",Replace function call with indexed accessor.(·¾›ñşÿÿÿÿ8¿–¾óÚ2J$56819f4c-cae5-40ae-82bc-bf531025f4ec
